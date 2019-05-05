@@ -26,16 +26,16 @@
 
                 <ul class="navbar-nav">
                   <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/">Anasayfa <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/about">About</a>
+                    <a class="nav-link" href="/about">Hakkımızda</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/services">Services</a>
+                    <a class="nav-link" href="/services">Hizmetler</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="/posts">Blog</a>
+                      <a class="nav-link" href="/posts">Bloglar</a>
                     </li>
                     
                 </ul>
@@ -62,7 +62,7 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/profile">Profil</a>
                                 <a class="dropdown-item" href="/profile/show">Profil Düzenle</a>
-                                <a class="dropdown-item" href="/dashboard">Dashboard</a>
+                                <a class="dropdown-item" href="/dashboard">Kontrol Paneli</a>
                                 <a class="dropdown-item" href="/favorite">Favoriler</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();

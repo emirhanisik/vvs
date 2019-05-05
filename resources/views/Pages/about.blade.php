@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-       <h1><?php echo $title; ?></h1>
-       <p>This is the about page</p>
+<div>
+       <h1>Hakkımızda</h1>
+       <p>Veni Vidi Scripsi Online Paylaşım Platformu</p>
+</div>
 @endsection
