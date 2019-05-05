@@ -33,7 +33,7 @@
                                 Aile Gezisi
                             </h5>
                             <p class="card-comment">
-                                Aileyle gidilebilecek geziler.
+                                Aileyle gidilebilecek en güzel geziler.
                             </p>
                             <a href="#" class="btn btn-secondary">
                                 İncele
@@ -49,7 +49,7 @@
                                 Arkadaş Gezisi
                             </h5>
                             <p class="card-comment">
-                                Arkadaşlarınla yapabileceğin tatil önerileri.
+                                Arkadaşlarınla yapabileceğin eğlenceli tatil önerileri.
                             </p>
                             <a href="#" class="btn btn-secondary">
                                 İncele
@@ -65,7 +65,55 @@
                                 Yılbaşı Gezisi
                             </h5>
                             <p class="card-comment">
-                                Yılbaşında nerelere gitmeli?
+                                Yeni yıla eğlenerek girmek isteyenler için en güzel fikirler.
+                            </p>
+                            <a href="#" class="btn btn-secondary">
+                                İncele
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card categories-card">
+                        <img src="../../img/sanat.jpeg" class="card-img-top" alt="image">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Kültür / Sanat
+                            </h5>
+                            <p class="card-comment">
+                                Kültür ve sanata ait tüm geziler.
+                            </p>
+                            <a href="#" class="btn btn-secondary">
+                                İncele
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card categories-card">
+                        <img src="../../img/snow.jpeg" class="card-img-top" alt="image">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Kar Tatili
+                            </h5>
+                            <p class="card-comment">
+                                Kar tatilini özleyenlere.
+                            </p>
+                            <a href="#" class="btn btn-secondary">
+                                İncele
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card categories-card">
+                        <img src="../../img/yazzz.jpeg" class="card-img-top" alt="image">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Yaz Tatili
+                            </h5>
+                            <p class="card-comment">
+                                Yazın sıcağını nerede yaşamak isterseniz.
                             </p>
                             <a href="#" class="btn btn-secondary">
                                 İncele
