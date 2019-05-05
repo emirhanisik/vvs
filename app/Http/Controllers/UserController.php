@@ -113,6 +113,7 @@ class UserController extends Controller
         $user->city = $request->input('city');
         $user->country = $request->input('country');
         $user->adress = $request->input('adress');
+        $user->bio = $request->input('bio');
         $user->gender = $request->input('gender'); 
         
         if($request->hasFile('profile_image')){

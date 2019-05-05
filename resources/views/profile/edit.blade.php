@@ -54,6 +54,12 @@
         </div>
         
         <H3>Kişisel Bilgiler</H3>
+
+        <div class = "form-group">
+            {{Form::label('bio', 'Biyografi')}}
+            {{Form::textarea('bio', Auth()->user()->bio , ['class' => 'form-control', 'placeholder' => 'Biyografi'])}}
+        </div>
+
         <div class = "form-group">
             {{Form::label('gender', 'Cinsiyet')}}
             {{Form::text('gender', Auth()->user()->gender , ['class' => 'form-control', 'placeholder' => 'Cinsiyet'])}}
