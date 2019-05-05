@@ -29,14 +29,41 @@
         {{Form::label('body','Body')}}
         {{Form::textarea('body','',['id'=>'article-ckeditor','class'=>'form-control','placeholder'=>'Yazmaya Başla..'])}}
         </div>
-
+    <hr>
+    <h3>Kapak Resminizi Ekleyin</h3>
     <div class="form-group" placeholder="Resim Ekle">
         
         {{Form::label('file','Dosya Ekle')}}
         {{Form::file('cover_image')}}
     
-    
     </div>    
+
+    <h3>Gezi Resimlerinizi Ekleyin</h3>
+
+    <div class="form-group" placeholder="Resim Ekle">
+        
+        {{Form::label('file','Dosya Ekle')}}
+        {{Form::file('image1')}}
+    
+    </div> 
+    <div class="form-group" placeholder="Resim Ekle">
+        
+        {{Form::label('file','Dosya Ekle')}}
+        {{Form::file('image2')}}
+    
+    </div> 
+    <div class="form-group" placeholder="Resim Ekle">
+        
+        {{Form::label('file','Dosya Ekle')}}
+        {{Form::file('image3')}}
+    
+    </div> 
+    <div class="form-group" placeholder="Resim Ekle">
+        
+        {{Form::label('file','Dosya Ekle')}}
+        {{Form::file('image4')}}
+    
+    </div> 
 
     {{Form::submit('submit'),['class'=>'btn btn-primary']}}
     {!! Form::close() !!} <!--form oluşturma-->

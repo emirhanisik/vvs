@@ -39,6 +39,12 @@
         {!!$post->body!!}
     </div>
     <hr>
+    <img style="width :30%" src="/storage/post_images/{{$post->image1}}">
+    <img style="width :30%" src="/storage/post_images/{{$post->image2}}">
+    <img style="width :30%" src="/storage/post_images/{{$post->image3}}">
+    <img style="width :30%" src="/storage/post_images/{{$post->image4}}">
+
+    <hr>
     <small>Bu blog {{$post->created_at}} {{$post->user->name}} tarafından yazıldı. </small>
     <hr>
     @if(!Auth::guest())
