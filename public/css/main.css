@@ -127,6 +127,7 @@
 .categories-card {
     will-change: box-shadow;
     transition: 0.2s box-shadow ease;
+    margin-top: 1rem;
 }
 
 .categories-card:hover {
@@ -136,8 +137,7 @@
 .categories-card .card-body {
     position: relative;
     padding-bottom: calc(37px + 1rem);
-    min-height: 200px;
-    max-height: 200px;
+    height: 160px;
     overflow: hidden;
 }
 

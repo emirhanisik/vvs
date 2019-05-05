@@ -9,13 +9,32 @@
             <h1 class="section-header text-left text-truncate m-0">
                 {{$post->title}}
             </h1>
-            <a href="/posts" class="btn btn-primary">
-                <i 
-                    class="fas fa-arrow-left mr-2"
-                    style="font-size: 11px;"
-                ></i>
-                Geri Dön
+            <div class="d-flex flex-row">
+                @if(!Auth::guest())
+                    @if(Auth::user()->id == $post->user_id)
+                        <a href="/posts/{{$post->id}}/edit" class="btn btn-success mr-2">
+                            {{-- <i 
+                                class="fas fa-pen mr-2"
+                                style="font-size: 11px;"
+                            ></i> --}}
+                            Düzenle
+                        </a>
+                        
+                        {!!Form::open(['action' =>['PostsController@destroy', $post->id] ,'method'=>'POST', 'class' => 'mb-0'])!!}
+                            {{Form::hidden('_method', 'Delete')}}
+                            {{Form::submit('Sil' , ['class' => 'btn btn-danger mr-2'])}}
+                        {!!Form::close() !!}
+                    @endif   
+                @endif
+            
+                <a href="/posts" class="btn btn-primary">
+                    {{-- <i 
+                        class="fas fa-arrow-left mr-2"
+                        style="font-size: 11px;"
+                    ></i> --}}
+                    Geri Dön
             </a>
+            </div>
         </div>
 
         <hr />
@@ -83,54 +102,61 @@
 
         <hr>
 
-        @if(!Auth::guest())
-            @if(Auth::user()->id == $post->user_id)
-                <a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a>
-                
-                <br>
-                <br>
-                {!!Form::open(['action' =>['PostsController@destroy', $post->id] ,'method'=>'POST', 'class' => 'pull-right'])!!}
-                    {{Form::hidden('_method', 'Delete')}}
-                    {{Form::submit('Delete' , ['class' => 'btn btn-danger'])}}
-                {!!Form::close() !!}
-            @endif   
-        @endif
-        <hr>
-        <hr>
+        <div class="d-flex flex-row align-items-center justify-content-end">
+            @if(!Auth::guest())
+                @if(Auth::user()->id == $post->user_id)
+                    <a href="/posts/{{$post->id}}/edit" class="btn btn-success mr-2">
+                        Düzenle
+                    </a>
+                    
+                    {!!Form::open(['action' =>['PostsController@destroy', $post->id] ,'method'=>'POST', 'class' => 'mb-0'])!!}
+                        {{Form::hidden('_method', 'Delete')}}
+                        {{Form::submit('Delete' , ['class' => 'btn btn-danger'])}}
+                    {!!Form::close() !!}
+                @endif   
+            @endif
+        </div>
 
+        <hr>
 
         {!!Form::open(['action' =>['PostsController@favorites', $post->id] ,'method'=>'GET', 'class' => 'pull-right'])!!}
         {{Form::hidden('_method', 'Favorites')}}
         {{Form::submit('Favorites' , ['class' => 'btn btn-danger'])}}
     {!!Form::close() !!}
     <hr>
+
+        <h3>YORUMLAR</h3>
+        @if(count($comments)>0)
+            @foreach ($comments->all() as $comment)
+            <p>{{$comment->comment}}</p>
+            <p>Yorumu Yapan: {{$comment->name}}</p>
+            @endforeach
+
+        @else
+        <p>Bu gönderiye hiç yorum yapılmamıştır.</p>
+        @endif
+
     <hr>
     <form method="POST" action='{{url("/comment/{$post->id}")}}'>
 
     {{csrf_field()}}
     <div class="form-group">
-
-            <textarea class="form-control" name="comment" id="comment" cols="30" rows="10" required autofocus></textarea>
+        <textarea 
+            class="form-control" 
+            name="comment" 
+            id="comment" 
+            cols="30" 
+            rows="3" 
+            required 
+        ></textarea>
     </div>
     <div class="form-group">
-    <button type="submit" class="btn btn-success btn-lg btn-block">Yorum Yap</button>
-
+        <button type="submit" class="btn btn-success btn-lg btn-block">Yorum Yap</button>
     </div>
 
 
     </form>
 
-
-    <h3>YORUMLAR</h3>
-    @if(count($comments)>0)
-        @foreach ($comments->all() as $comment)
-        <p>{{$comment->comment}}</p>
-        <p>Yorumu Yapan: {{$comment->name}}</p>
-        @endforeach
-
-    @else
-    <p>Bu gönderiye hiç yorum yapılmamıştır.</p>
-    @endif
     @endsection
 
     </div>
