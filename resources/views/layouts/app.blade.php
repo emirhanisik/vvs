@@ -18,15 +18,18 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 </head>
 <body>
     <div id="app">
         
-        <main class="py-4">
+        <main>
             @include('inc.navbar')
-            <div class="container">
-            @include('inc.messages')
-            @yield('content')
+
+            <div class="main-wrapper">
+                @include('inc.messages')
+                @yield('content')
             
             </div>
            

@@ -1,0 +1,70 @@
+/* html {
+    font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+
+    html {
+        font-size: 16px;
+    }
+} */
+
+@import url('https://fonts.googleapis.com/css?family=Marck+Script');
+
+.font-hw {
+    font-family: 'Marck Script',
+        cursive;
+}
+
+.main-wrapper {
+    margin-top: 55px;
+}
+
+.navbar {
+    height: 55px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.hero {
+    min-height: calc(100vh - 55px);
+    background-image: linear-gradient(to top right,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.5)),
+        url("../img/hero.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+}
+
+.hero h1 {
+    font-family: 'Marck Script',
+        cursive;
+    letter-spacing: -4.01px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.where-to-go {
+    border-radius: 1000px;
+    min-width: 400px;
+    max-width: 100%;
+    padding: 0.5rem 2rem;
+    padding-right: 3rem;
+}
+
+.search-btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    margin-right: 12px;
+    color: grey;
+}
