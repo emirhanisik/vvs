@@ -39,10 +39,9 @@
      <!--Scripts-->
      <script src="{{ asset('js/app.js') }}" ></script>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-     <script src="../js/parallax.min.js"></script>
      <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
      <script>
-         CKEDITOR.replace( 'article-ckeditor' );
+        CKEDITOR.replace( 'article-ckeditor' );
      </script>
 </body>
 </html>

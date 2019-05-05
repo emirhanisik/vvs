@@ -44,7 +44,7 @@
                                 <div class="col-12 col-md-4">
                                         <div class="card">
                                             <img 
-                                                class="card-img-top"
+                                                class="card-img-top img-cover"
                                                 height="160"
                                                 src="/storage/cover_images/{{$post->cover_image}}"
                                             >
