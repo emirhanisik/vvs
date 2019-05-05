@@ -68,3 +68,87 @@
     margin-right: 12px;
     color: grey;
 }
+
+.section {
+    padding: 3rem 0;
+}
+
+.section-posts .where-to-go {
+    border-radius: 1000px;
+    min-width: 400px;
+    max-width: 400px;
+    padding: 0.5rem 2rem;
+    padding-right: 3rem;
+}
+
+.section-posts .search-btn {
+    margin-right: 12px;
+    color: grey;
+}
+
+.section-heading {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* 
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+} 
+*/
+
+.card-author a {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--secondary);
+}
+
+.categories-card {
+    will-change: box-shadow;
+    transition: .2s box-shadow ease;
+}
+
+.categories-card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.categories-card .card-body {
+    position: relative;
+    padding-bottom: calc(37px + 1rem);
+    min-height: 200px;
+    max-height: 200px;
+    overflow: hidden;
+}
+
+.categories-card .card-body .btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.categories-card img {
+    height: 140px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.categories-card .card-title {
+    font-weight: 600;
+}
+
+.categories-card .card-comment {
+    font-size: 14px;
+    line-height: 1.3;
+}
