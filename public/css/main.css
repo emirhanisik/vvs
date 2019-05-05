@@ -169,6 +169,10 @@
     font-weight: 600;
 }
 
+.section-blog-post .author-info p:not(:last-child) {
+    margin-right: 1rem;
+}
+
 .section-blog-post .author-info p span {
     font-weight: 400;
 }

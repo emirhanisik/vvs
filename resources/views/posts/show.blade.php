@@ -28,11 +28,26 @@
         >
 
         <div class="author-info mt-3">
-
-            <p>Şehir: <span>{{$post->city}}</span></p>
-            <p>Gün Sayısı: <span>{{$post->trip_day}}</span></p>
-            <p>Harcanan Tutar: <span>{{$post->trip_fee}}</span></p>
-            <p>Gezi Türü: <span>{{$post->trip_type}}</span></p>
+            
+            <div class="d-flex flex-row align-items-center">
+                <p>
+                    <i class="fas fa-map-marker-alt mr-2"></i>
+                    <span>{{$post->city}}</span></p>
+                <p>
+                    <i class="fas fa-clock mr-2"></i>
+                    <span>{{$post->trip_day}}</span></p>
+                <p>
+                    <i class="fas fa-money-bill-alt mr-2"></i>
+                    <span>{{$post->trip_fee}}</span>
+                </p>
+                <p>
+                    <i class="fas fa-suitcase-rolling"></i>
+                    <span>{{$post->trip_type}}</span>
+                </p>
+            </div>
+            <p>
+                Bu blog {{$post->created_at}} {{$post->user->name}} tarafından yazıldı.
+            </p>
 
         </div>
 
@@ -67,8 +82,7 @@
         </div>
 
         <hr>
-        <small>Bu blog {{$post->created_at}} {{$post->user->name}} tarafından yazıldı. </small>
-        <hr>
+
         @if(!Auth::guest())
             @if(Auth::user()->id == $post->user_id)
                 <a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a>
