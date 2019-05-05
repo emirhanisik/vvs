@@ -28,9 +28,7 @@
             @include('inc.navbar')
 
             <div class="main-wrapper">
-                <div class="container pt-3">
                     @include('inc.messages')
-                </div>
 
                 @yield('content')
             

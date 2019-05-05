@@ -187,3 +187,9 @@
 .cke_bottom {
     padding: 6px 8px !important;
 }
+
+.profile-img {
+    border-radius: 1000px;
+    width: 100px;
+    height: 100px;
+}
