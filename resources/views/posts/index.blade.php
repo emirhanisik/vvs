@@ -45,7 +45,7 @@
                                         <div class="card">
                                             <img 
                                                 class="card-img-top"
-                                                height="240"
+                                                height="160"
                                                 src="/storage/cover_images/{{$post->cover_image}}"
                                             >
                                         

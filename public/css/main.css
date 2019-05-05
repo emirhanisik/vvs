@@ -9,11 +9,10 @@
     }
 } */
 
-@import url('https://fonts.googleapis.com/css?family=Marck+Script');
+@import url("https://fonts.googleapis.com/css?family=Marck+Script");
 
 .font-hw {
-    font-family: 'Marck Script',
-        cursive;
+    font-family: "Marck Script", cursive;
 }
 
 .main-wrapper {
@@ -30,9 +29,11 @@
 
 .hero {
     min-height: calc(100vh - 55px);
-    background-image: linear-gradient(to top right,
+    background-image: linear-gradient(
+            to top right,
             rgba(0, 0, 0, 0.7),
-            rgba(0, 0, 0, 0.5)),
+            rgba(0, 0, 0, 0.5)
+        ),
         url("../img/hero.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -41,8 +42,7 @@
 }
 
 .hero h1 {
-    font-family: 'Marck Script',
-        cursive;
+    font-family: "Marck Script", cursive;
     letter-spacing: -4.01px;
 }
 
@@ -112,9 +112,30 @@
     color: var(--secondary);
 }
 
+.card-author i {
+    font-size: 0.75rem;
+    margin-right: 0.25rem;
+    color: var(--secondary);
+}
+
+.card-date {
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+.card-date i {
+    margin-right: 0.25rem;
+}
+
+.card-author i {
+    font-size: 0.75rem;
+    margin-right: 0.25rem;
+    color: var(--secondary);
+}
+
 .categories-card {
     will-change: box-shadow;
-    transition: .2s box-shadow ease;
+    transition: 0.2s box-shadow ease;
 }
 
 .categories-card:hover {
