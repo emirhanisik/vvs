@@ -33,9 +33,9 @@
                                 Aile Gezisi
                             </h5>
                             <p class="card-comment">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ducimus?
+                                Aileyle gidilebilecek geziler.
                             </p>
-                            <a href="#" class="btn btn-primary">
+                            <a href="#" class="btn btn-secondary">
                                 İncele
                             </a>
                         </div>
@@ -43,15 +43,31 @@
                 </div>
                 <div class="col-4">
                     <div class="card categories-card">
-                        <img src="../../img/cat-family.jpg" class="card-img-top" alt="image">
+                        <img src="../../img/ark.jpeg" class="card-img-top" alt="image">
                         <div class="card-body">
                             <h5 class="card-title">
                                 Arkadaş Gezisi
                             </h5>
                             <p class="card-comment">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, deserunt.
+                                Arkadaşlarınla yapabileceğin tatil önerileri.
                             </p>
-                            <a href="#" class="btn btn-primary">
+                            <a href="#" class="btn btn-secondary">
+                                İncele
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card categories-card">
+                        <img src="../../img/chrs.jpeg" class="card-img-top" alt="image">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Yılbaşı Gezisi
+                            </h5>
+                            <p class="card-comment">
+                                Yılbaşında nerelere gitmeli?
+                            </p>
+                            <a href="#" class="btn btn-secondary">
                                 İncele
                             </a>
                         </div>
