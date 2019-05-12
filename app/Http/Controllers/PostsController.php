@@ -8,6 +8,7 @@ use App\Post; //model name is App. Post is a model name.
 use DB;
 Use App\Comment;
 Use App\Favorites;
+Use App\wishList;
 
 class PostsController extends Controller
 {
@@ -23,8 +24,7 @@ class PostsController extends Controller
     } 
     //Login olmadan blog post ile alakali olan sayfaya erisimi engelledik.
   
-    
-    
+   
     /**
      * Display a listing of the resource.
      *
@@ -356,22 +356,12 @@ class PostsController extends Controller
         return redirect()->route('posts.show',[$post->id])->with('success', 'Yazı favorilere eklendi.');
     }
 
+  
 
-/*
-    public function showFavorites($id)
-    {
-     
-        //show blog posts
-        $post = Post::find($id);
-        $favorites=DB::TABLE('users')
-        ->join('favorites','users.id','=','favorites.user_id')
-        ->join('posts','favorites.post_id','=','posts.id')
-        ->select('users.name','favorites.*')
-        ->where(['posts.id'=>$id])
-        ->get();
-        
-        return view('posts.show',['post'=>$post,'favorites'=>$favorites]);
-       // ->with('post',$post);
+    public function view_favorites(){
+        $favorites = DB::table('favorites')->leftJoin('posts', 'favorites.post_id', '=', 'posts.id')->get();
+        return view('favorite', ['favorite'=>$favorites,]);
+
     }
-*/
+
 }

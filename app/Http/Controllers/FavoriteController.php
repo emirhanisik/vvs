@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use App\Post; //model name is App. Post is a model name.
+use DB;
+Use App\Comment;
+Use App\Favorites;
+
 
 class FavoriteController extends Controller
 {
@@ -49,7 +55,8 @@ class FavoriteController extends Controller
      */
     public function show($id)
     {
-        //
+        //$favo = DB::table('wishlist')->leftJoin('posts', 'favorites.post_id', '=', 'posts.id')->get();
+        //return view('/favorite', compact('posts'));
     }
 
     /**

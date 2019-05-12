@@ -49,3 +49,8 @@ Route::get('/favorites/{id}','PostsController@favorites');
 
 Route::get('favorite','FavoriteController@index');
 Auth::routes();
+
+
+
+Route::get('/favorite','PostsController@view_favorites');
+Route::get('/posts/favorites','PostsController@view_favorites');

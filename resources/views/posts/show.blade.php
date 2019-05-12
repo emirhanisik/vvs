@@ -118,13 +118,27 @@
         </div>
 
         <hr>
-
+        <?php
+                            //wishlist Code start
+        if(Auth::check()){
+         $favo = DB::table('favorites')->leftJoin('posts', 'favorites.post_id', '=', 'posts.id')->where('favorites.post_id', '=',$post->id)->get();
+                            
+         $count = App\Favorites::where(['post_id' => $post->id])->count();
+        ?>
+<?php if($count=="0"){?>
         {!!Form::open(['action' =>['PostsController@favorites', $post->id] ,'method'=>'GET', 'class' => 'pull-right'])!!}
         {{Form::hidden('_method', 'Favorites')}}
         {{Form::submit('Favorites' , ['class' => 'btn btn-danger'])}}
     {!!Form::close() !!}
-    <hr>
 
+
+    <?php } else {?>
+        <h5 style="color:green"> Added to <a href="{{url('/favorite')}}">Favorites</a></h5>
+      <?php }
+        }?>
+
+    <hr>
+    <hr>
         <h3>YORUMLAR</h3>
         @if(count($comments)>0)
             @foreach ($comments->all() as $comment)
