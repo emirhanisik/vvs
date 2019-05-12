@@ -39,6 +39,50 @@
                 
                 
                 </div>    
+
+                <div class="col-12">
+                    <h3>Gezi Resimlerinizi Ekleyin</h3>
+                </div>
+    
+                <div class="form-group col-12 col-md-6">
+                    <label>Görsel 1</label>
+                    <div class="input-group">
+                        <div class="custom-file">
+                            {{Form::file('image1', ['class'=>'custom-file-input'])}}
+                            {{Form::label('file', 'Dosya Ekle', ['class'=>'custom-file-label'])}}
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="form-group col-12 col-md-6">
+                    <label>Görsel 2</label>
+                    <div class="input-group">
+                        <div class="custom-file">
+                            {{Form::file('image2', ['class'=>'custom-file-input'])}}
+                            {{Form::label('file', 'Dosya Ekle', ['class'=>'custom-file-label'])}}
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="form-group col-12 col-md-6">
+                    <label>Görsel 3</label>
+                    <div class="input-group">
+                        <div class="custom-file">
+                            {{Form::file('image3', ['class'=>'custom-file-input'])}}
+                            {{Form::label('file', 'Dosya Ekle', ['class'=>'custom-file-label'])}}
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="form-group col-12 col-md-6">
+                    <label>Görsel 4</label>
+                    <div class="input-group">
+                        <div class="custom-file">
+                            {{Form::file('image4', ['class'=>'custom-file-input'])}}
+                            {{Form::label('file', 'Dosya Ekle', ['class'=>'custom-file-label'])}}
+                        </div>
+                    </div>
+                </div>
             {{Form::submit('submit'),['class'=>'btn btn-primary']}}
             {{Form::hidden('_method','PUT')}} <!-- Edit icin PUT methodunu kullan.-->
     {!! Form::close() !!} <!--form oluşturma-->

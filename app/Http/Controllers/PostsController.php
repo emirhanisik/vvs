@@ -252,11 +252,15 @@ class PostsController extends Controller
 
             'title'=>'required',
             'body'=>'required',
+            'cover_image' => 'image|nullable|max:1999',
+            'image1' =>'image|nullable|max:1999',
+            'image2' =>'image|nullable|max:1999',
+            'image3' =>'image|nullable|max:1999',
+            'image4' =>'image|nullable|max:1999',
             'city'=>'required',
             'trip_fee'=>'required',
             'trip_day'=>'required',
             'trip_type'=>'required'
-
          ]);
 
            //Handle File Upload
@@ -274,6 +278,88 @@ class PostsController extends Controller
             $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
     
               }
+
+              //Handle File Upload - Image1
+         if($request->hasFile('image1')){
+            // Get file name with the extension
+    
+            $filenameWithExt1 =$request->file('image1')->getClientOriginalName();
+            //  Get just file name
+            $filename1 = pathInfo($filenameWithExt1, PATHINFO_FILENAME);
+            //get just extension
+            $extension1 = $request->file('image1')->getClientOriginalExtension();
+            //Filename to Store
+            $fileNameToStore1 = $filename1.'_'.time().'.'.$extension1;
+            //Upload image
+            $path1 = $request->file('image1')->storeAs('public/post_images', $fileNameToStore1);
+    
+              }
+             else{
+    
+                $fileNameToStore1 = 'noimage.jpg';
+             }
+
+
+             //Handle File Upload - Image2
+         if($request->hasFile('image2')){
+            // Get file name with the extension
+    
+            $filenameWithExt2 =$request->file('image2')->getClientOriginalName();
+            //  Get just file name
+            $filename2 = pathInfo($filenameWithExt2, PATHINFO_FILENAME);
+            //get just extension
+            $extension2 = $request->file('image2')->getClientOriginalExtension();
+            //Filename to Store
+            $fileNameToStore2 = $filename2.'_'.time().'.'.$extension2;
+            //Upload image
+            $path2 = $request->file('image2')->storeAs('public/post_images', $fileNameToStore2);
+    
+              }
+             else{
+    
+                $fileNameToStore2 = 'noimage.jpg';
+             }
+
+               //Handle File Upload - Image3
+         if($request->hasFile('image3')){
+            // Get file name with the extension
+    
+            $filenameWithExt3 =$request->file('image3')->getClientOriginalName();
+            //  Get just file name
+            $filename3 = pathInfo($filenameWithExt3, PATHINFO_FILENAME);
+            //get just extension
+            $extension3 = $request->file('image3')->getClientOriginalExtension();
+            //Filename to Store
+            $fileNameToStore3 = $filename3.'_'.time().'.'.$extension3;
+            //Upload image
+            $path3 = $request->file('image3')->storeAs('public/post_images', $fileNameToStore3);
+    
+              }
+             else{
+    
+                $fileNameToStore3 = 'noimage.jpg';
+             }
+             
+
+ //Handle File Upload - Image4
+ if($request->hasFile('image4')){
+    // Get file name with the extension
+
+    $filenameWithExt4 =$request->file('image4')->getClientOriginalName();
+    //  Get just file name
+    $filename4 = pathInfo($filenameWithExt4, PATHINFO_FILENAME);
+    //get just extension
+    $extension4 = $request->file('image4')->getClientOriginalExtension();
+    //Filename to Store
+    $fileNameToStore4 = $filename4.'_'.time().'.'.$extension4;
+    //Upload image
+    $path4 = $request->file('image4')->storeAs('public/post_images', $fileNameToStore4);
+
+      }
+     else{
+
+        $fileNameToStore4 = 'noimage.jpg';
+     }
            
     
          
@@ -288,6 +374,22 @@ class PostsController extends Controller
          if($request->hasFile('cover_image')){
 
             $post->cover_image = $fileNameToStore;
+         }
+         if ($request->hasFile('image1')){
+            $post->image1 = $fileNameToStore1;
+
+         }
+         if ($request->hasFile('image2')){
+            $post->image1 = $fileNameToStore2;
+
+         }
+         if ($request->hasFile('image3')){
+            $post->image1 = $fileNameToStore3;
+
+         }
+         if ($request->hasFile('image4')){
+            $post->image1 = $fileNameToStore4;
+
          }
          $post ->save();
 
