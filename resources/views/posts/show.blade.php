@@ -61,7 +61,7 @@
                 </p>
                 <p>
                     <i class="fas fa-suitcase-rolling"></i>
-                    <span>{{$post->trip_type}}</span>
+                    <span>{{$post->category['name']}}</span>  
                 </p>
             </div>
             <p>
@@ -99,7 +99,7 @@
                 >
             </div>
         </div>
-
+      
         <hr>
 
         <div class="d-flex flex-row align-items-center justify-content-end">

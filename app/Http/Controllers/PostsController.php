@@ -8,7 +8,7 @@ use App\Post; //model name is App. Post is a model name.
 use DB;
 Use App\Comment;
 Use App\Favorites;
-Use App\wishList;
+Use App\Category;
 
 class PostsController extends Controller
 {
@@ -49,7 +49,9 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+       $post = Post::all();
+       $cat = Category::all();
+        return view('posts.create', ['post' => $post, 'cat' =>$cat]);
     }
 
     /**
@@ -71,8 +73,8 @@ class PostsController extends Controller
             'image4' =>'image|nullable|max:1999',
             'city'=>'required',
             'trip_fee'=>'required',
-            'trip_day'=>'required',
-            'trip_type'=>'required'
+            'trip_day'=>'required'
+           
          ]);
          
          //Handle File Upload
@@ -186,13 +188,13 @@ class PostsController extends Controller
          $post ->city= $request->input('city');
          $post ->trip_day= $request->input('trip_day');
          $post ->trip_fee= $request->input('trip_fee');
-         $post ->trip_type= $request->input('trip_type');
          $post->user_id = auth()->user()->id;
          $post->cover_image = $fileNameToStore;
          $post->image1 = $fileNameToStore1;
          $post->image2 = $fileNameToStore2;
          $post->image3 = $fileNameToStore3;
          $post->image4 = $fileNameToStore4;
+         $post->category_id = $request->category_id;
          $post ->save();
 
          return redirect('/posts')->with('success', 'Post Created');
@@ -228,6 +230,7 @@ class PostsController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
+        $cat = Category::all();
 
         //Doğru kullanıcı için doğrulama - Check for correct user!!!
          if( auth()->user()->id !== $post->user_id){
@@ -235,7 +238,7 @@ class PostsController extends Controller
             return redirect('/posts')->with('error','Unauthorized Page!!');
         }
         
-        return view('posts.edit')->with('post',$post);
+        return view('posts.edit', ['post'=>$post, 'cat'=>$cat]);//->with('post',$post);
         
     }
 
@@ -259,8 +262,8 @@ class PostsController extends Controller
             'image4' =>'image|nullable|max:1999',
             'city'=>'required',
             'trip_fee'=>'required',
-            'trip_day'=>'required',
-            'trip_type'=>'required'
+            'trip_day'=>'required'
+            
          ]);
 
            //Handle File Upload
@@ -370,7 +373,6 @@ class PostsController extends Controller
          $post ->city= $request->input('city');
          $post ->trip_day= $request->input('trip_day');
          $post ->trip_fee= $request->input('trip_fee');
-         $post ->trip_type= $request->input('trip_type');
          if($request->hasFile('cover_image')){
 
             $post->cover_image = $fileNameToStore;

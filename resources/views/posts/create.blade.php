@@ -23,6 +23,17 @@
             </div>
 
             <div class="form-group  col-12 col-md-6">
+                {{Form::label('category_id','Kategori')}}
+                <select class="form-control" name="category_id" >
+
+                    @foreach ($cat as $key=>$value)
+                <option value="{{$value->id}}">{{$value->name}}</option>
+                    @endforeach
+
+                </select>
+            </div>
+
+            <div class="form-group  col-12 col-md-6">
                 {{Form::label('trip_day','Tatil süresi (gün)')}}
                 {{Form::number('trip_day','',['class'=>'form-control','placeholder'=>'7 gün'])}}
             </div>
@@ -31,12 +42,6 @@
                 {{Form::label('trip_fee','Seyahat Tutarı')}}
                 {{Form::text('trip_fee','',['class'=>'form-control','placeholder'=>'5.600,750 ₺'])}}
             </div>  
-
-            <div class="form-group  col-12 col-md-6">
-                {{Form::label('trip_type','Gezi Türü')}}
-                {{Form::text('trip_type','',['class'=>'form-control','placeholder'=>'Yılbaşı Gezisi'])}}
-            </div>  
-
             <div class="col-12 col-md-6">
                 <label>Kapak Resminizi Ekleyin</label>
                 <div class="input-group">
