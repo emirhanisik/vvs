@@ -463,8 +463,9 @@ class PostsController extends Controller
   
 
     public function view_favorites(){
+       
         $favorites = DB::table('favorites')->leftJoin('posts', 'favorites.post_id', '=', 'posts.id')->get();
-        return view('favorite', ['favorite'=>$favorites,]);
+        return view('favorite', ['favorite'=>$favorites]);
 
     }
 

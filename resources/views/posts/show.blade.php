@@ -8,7 +8,7 @@
         <div class="d-flex flex-row align-items-center justify-content-between">
             <h1 class="section-header text-left text-truncate m-0">
                 {{$post->title}}
-            </h1>
+            </h1>   
             <div class="d-flex flex-row">
                 @if(!Auth::guest())
                     @if(Auth::user()->id == $post->user_id)
