@@ -17,10 +17,11 @@
             >
                 <input 
                     type="text" 
+                    name="search"
                     class="form-control where-to-go" 
                     placeholder="Ne arıyorsun?"
                 >
-                <button class="search-btn">
+                <button class="search-btn" type="submit">
                     <i class="fas fa-search"></i>
                 </button>
             </div>

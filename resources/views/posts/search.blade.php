@@ -1,48 +1,87 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Posts</h1>
-    <br> 
+<section class="section section-posts">
+
+    <h1 class="section-heading">
+        Arama Sonuçları
+    </h1>
     
-<form method="POST" action="{{url("/search")}}">
-    {{ csrf_field() }}
+    <form method="POST" action="{{url("/search")}}">
+        {{ csrf_field() }}
 
+        {{-- Search Bar --}}
+        <div class="text-center mb-5">
+            <div 
+                class="form-group d-inline-block flex-row p-0 m-0 mt-2 mx-auto"
+            >
+                <input 
+                    type="text" 
+                    name="search"
+                    class="form-control where-to-go" 
+                    placeholder="Ne arıyorsun?"
+                >
+                <button class="search-btn" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
 
-    <div class="input-group">
-        <input type="text" name="search" class="from-control" placeholder="Nereye gitmek istersin ?">
-        <br>
-        <span class="input-group-btn">
-        <button type="submit" class="btn btn-primary">Ara </button>
-    
-        </span>
-    </div>
+        <hr />
 
-    <br>
-    <br>
-
-
-
-    @if(count($posts)>0)
-        @foreach ($posts as $post)
-
-            <div class="well well-lg">
-                <div class="row">
-
-                    <div class="col-md-4 col-sm-4">
-                    <img style="width :100%" src="/storage/cover_images/{{$post->cover_image}}">
-                    </div>
-
-                    <div class="col-md-4 col-sm-4">
-                            <h3><a href="/posts/{{$post->id}}"> {{$post->title}}</a></h3>
-                            <small>Written on {{$post->created_at}} by {{$post->user->name}}</small>
-                    </div>
+        <div class="container">
+                <div class="col-12 text-right">
+                    <a href="/posts/create" class="btn btn-outline-success">
+                        <i class="fas fa-pen mr-2"></i>
+                        Post Oluştur
+                    </a>
                 </div>
-             </div>    
-        @endforeach
-       
-    @else
-            <p>No post found !</p>
-    @endif
-    
-       
-    @endsection
+                <div class="mt-3">
+                    <div class="row">
+
+                    @if(count($posts)>0)
+                        @foreach ($posts as $post)
+
+                                <div class="col-12 col-md-4">
+                                        <div class="card">
+                                            <img 
+                                                class="card-img-top img-cover"
+                                                height="160"
+                                                src="/storage/cover_images/{{$post->cover_image}}"
+                                            >
+                                        
+                                        <div class="card-body text-truncate">
+                                            <h3 class="card-title">
+                                                <a href="/posts/{{$post->id}}">
+                                                    {{$post->title}}
+                                                </a>
+                                            </h3>
+                                            <p class="card-author mb-0">
+                                                <i class="fas fa-user"></i>
+                                                <a href="/profile/{{$post->user->id}}">
+                                                    {{$post->user->name}}
+                                                </a> 
+                                            </p>
+                                            <small class="card-date">
+                                                <i class="fas fa-clock"></i>
+                                                {{$post->created_at}}
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                        @endforeach
+                    @else
+                            <p>No post found !</p>
+                    @endif
+                    
+                    
+                    @endsection
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+        
+        
+</section>

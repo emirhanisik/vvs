@@ -16,7 +16,24 @@
                     <div class="ml-4">
                         <h2>
                             {{Auth::user()->name}} {{Auth::user()->surname}}
-                        </h2>
+                        </h2> 
+                          <p>
+                            <i class="fas fa-users"> </i>
+                                <span>
+                                @if (count($posts) >= 0 && count($posts)<= 6)
+                                    <?php echo 'Bronz Üye'?>
+                                        @endif
+
+                                @if (count($posts) >= 7 && count($posts)<= 14)
+                                    <?php echo 'Gümüş Üye'?>
+                                        @endif
+                                    </span>
+                                @if (count($posts) > 15)
+                                    <?php echo 'Altın Üye'?>
+                                        @endif
+                                    </span>
+                          
+                        </p>
                         <p class="mb-2">
                             <i class="fas fa-map-marker mr-2"></i>
                             <span>
@@ -39,6 +56,10 @@
             </div>
         </div>
     </div>
+
+@if (count($posts) == 0)
+    <?php echo 'Golden Üye'?>
+@endif
 
     <section class="section col-12">
 
