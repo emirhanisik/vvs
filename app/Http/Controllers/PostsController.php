@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Post; //model name is App. Post is a model name.
 use DB;
+Use App\User;
 Use App\Comment;
 Use App\Favorites;
 Use App\Category;
@@ -463,10 +464,12 @@ class PostsController extends Controller
   
 
     public function view_favorites(){
-       
-        $favorites = DB::table('favorites')->leftJoin('posts', 'favorites.post_id', '=', 'posts.id')->get();
-        return view('favorite', ['favorite'=>$favorites]);
-
+         $favorites = DB::table('favorites')
+            ->leftJoin('posts', 'favorites.post_id', '=', 'posts.id')
+            ->leftJoin('users', 'favorites.user_id', '=', 'users.id')
+            ->where('users.id', '=', auth()->user()->id)
+            ->get();
+         return view('favorite', ['favorites'=>$favorites]);
     }
 
 }

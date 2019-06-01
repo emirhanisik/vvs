@@ -11,8 +11,13 @@ class ProfileController extends Controller
 
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
-        return view('profile.index')->with('posts', $user->posts);
+        return view('profile.index')->with(['posts' => $user->posts, 'user' => $user]);
         
+    }
+
+    public function show_page($id){
+        $user = User::find($id);
+        return view('profile.index')->with(['posts' => $user->posts, 'user' => $user]);
     }
 
     

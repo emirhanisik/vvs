@@ -11,11 +11,11 @@
                     <img 
                         class="profile-img img-cover" 
                         width="100%" 
-                        src="/storage/profile_images/{{Auth::user()->profile_image}}"
+                        src="/storage/profile_images/{{$user->profile_image}}"
                     />
                     <div class="ml-4">
                         <h2>
-                            {{Auth::user()->name}} {{Auth::user()->surname}}
+                            {{$user->name}} {{$user->surname}}
                         </h2> 
                           <p>
                             <i class="fas fa-users"> </i>
@@ -37,20 +37,20 @@
                         <p class="mb-2">
                             <i class="fas fa-map-marker mr-2"></i>
                             <span>
-                                {{Auth::user()->city}}, {{Auth::user()->country}}
+                                {{$user->city}}, {{$user->country}}
                             </span>
                         </p>
                         <p>
                             <i class="fas fa-envelope mr-2"></i>
-                            <a href="mailto:{{Auth::user()->email}}">
-                                {{Auth::user()->email}}
+                            <a href="mailto:{{$user->email}}">
+                                {{$user->email}}
                             </a>
                         </p>
                     </div>
                 </div>
 
                 <div>
-                        {{Auth::user()->bio}}
+                        {{$user->bio}}
                 </div>
 
             </div>

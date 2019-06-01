@@ -40,6 +40,7 @@ Auth::routes();
 
 //Kullanıcı bilgileri için oluşturduğumuz route
 Route::get('/profile/show','UserController@index')->name('profile.users.show');
+Route::get('/profile/{id}', 'ProfileController@show_page');
 Route::put('/profile/edit/{id}','UserController@update');
 
 Route::post('/search','PostsController@search');
