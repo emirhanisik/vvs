@@ -133,7 +133,7 @@
 
 
     <?php } else {?>
-        <h5 style="color:green"> Added to <a href="{{url('/favorite')}}">Favorites</a></h5>
+        <h5 style="color:green"> <a href="{{url('/favorite')}}">Favorilere</a> Eklendi </h5>
       <?php }
         }?>
 
