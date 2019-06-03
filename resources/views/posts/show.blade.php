@@ -144,6 +144,12 @@
             @foreach ($comments->all() as $comment)
             <p>{{$comment->comment}}</p>
             <p>Yorumu Yapan: {{$comment->name}}</p>
+            @if(!Auth::guest())
+            @if(Auth::user()->id == $comment->user_id)
+            
+            <a href="/removeComment/{{$comment->id}}" style="color:red">Yorumu Sil</a>
+            @endif
+            @endif
             @endforeach
 
         @else

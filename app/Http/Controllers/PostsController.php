@@ -476,7 +476,12 @@ class PostsController extends Controller
 
       //echo $id;
       DB::table('favorites')->where('post_id', '=', $id)->delete();
-      return redirect('/favorite')->with('success', 'Favori Kaldirildi'); 
+      return redirect('/favorite')->with('success', 'Favori Başarıyla Kaldırıldı.'); 
 
+    }
+    public function removeComment($id) {
+
+      DB::table('comments')->where('id','=',$id)->delete();
+      return redirect('posts')->with('success','Yorum Başarıyla Kaldırıldı.');
     }
 }
