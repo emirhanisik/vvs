@@ -13,15 +13,7 @@
     </h1>
     <div class="text-center mb-5">
         <div class="form-group d-inline-block flex-row p-0 m-0 mt-2 mx-auto">
-            <input 
-                type="text" 
-                name="search"
-                class="form-control where-to-go" 
-                placeholder="Ne arıyorsun?"
-            >
-            <button class="search-btn" type="submit">
-                <i class="fas fa-search"></i>
-            </button>
+        
         </div>
     </div>
 
@@ -29,10 +21,7 @@
 
     <div class="container">
         <div class="col-12 text-right">
-            <a href="/favorites/create" class="btn btn-outline-success">
-                <i class="fas fa-pen mr-2"></i>
-                favorite Oluştur
-            </a>
+           
         </div>
             <div class="mt-3">
                 <div class="row">
@@ -65,7 +54,9 @@
                                         {{$favorite->created_at}}
                                     </small>
                                 </div>
+                                <a href="/removeFavorite/{{$favorite->post_id}}" style="color:red">Favorilerden Kaldır</a>
                             </div>
+                       
                         </div>                    
                     @endforeach
                 @else

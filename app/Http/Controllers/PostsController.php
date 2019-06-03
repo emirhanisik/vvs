@@ -472,4 +472,11 @@ class PostsController extends Controller
          return view('favorite', ['favorites'=>$favorites]);
     }
 
+    public function removeFavorite($id){
+
+      //echo $id;
+      DB::table('favorites')->where('post_id', '=', $id)->delete();
+      return redirect('/favorite')->with('success', 'Favori Kaldirildi'); 
+
+    }
 }

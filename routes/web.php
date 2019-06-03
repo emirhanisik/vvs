@@ -55,3 +55,4 @@ Auth::routes();
 
 Route::get('/favorite','PostsController@view_favorites');
 Route::get('/posts/favorites','PostsController@view_favorites');
+Route::get('/removeFavorite/{id}','PostsController@removeFavorite');
