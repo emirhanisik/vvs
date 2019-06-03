@@ -57,3 +57,10 @@ Route::get('/favorite','PostsController@view_favorites');
 Route::get('/posts/favorites','PostsController@view_favorites');
 Route::get('/removeFavorite/{id}','PostsController@removeFavorite');
 Route::get('/removeComment/{id}','PostsController@removeComment');
+
+Route::get('/category/family', 'PostsController@familyCategory');
+Route::get('/category/friend', 'PostsController@friendCategory');
+Route::get('/category/newyear', 'PostsController@newyearCategory');
+Route::get('/category/culture', 'PostsController@cultureCategory');
+Route::get('/category/semester', 'PostsController@semesterCategory');
+Route::get('/category/summer', 'PostsController@summerCategory');

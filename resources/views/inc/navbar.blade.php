@@ -46,11 +46,11 @@
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item d-flex align-items-center mr-2">
-                            <a class="nav-link p-0" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link p-0" href="{{ route('login') }}">{{ __('Giriş Yap') }}</a>
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="btn btn-primary btn-sm" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="btn btn-primary btn-sm" href="{{ route('register') }}">{{ __('Kayıt Ol') }}</a>
                             </li>
                         @endif
                     @else
@@ -67,7 +67,7 @@
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                                    {{ __('Çıkış Yap') }}
                                 </a>
                             
 

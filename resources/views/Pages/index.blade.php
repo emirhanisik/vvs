@@ -39,7 +39,7 @@
                             <p class="card-comment">
                                 Aileyle gidilebilecek en güzel geziler.
                             </p>
-                            <a href="#" class="btn btn-secondary">
+                            <a href="category/family" class="btn btn-secondary">
                                 İncele
                             </a>
                         </div>
@@ -55,7 +55,7 @@
                             <p class="card-comment">
                                 Arkadaşlarınla yapabileceğin eğlenceli tatil önerileri.
                             </p>
-                            <a href="#" class="btn btn-secondary">
+                            <a href="category/friend" class="btn btn-secondary">
                                 İncele
                             </a>
                         </div>
@@ -71,7 +71,7 @@
                             <p class="card-comment">
                                 Yeni yıla eğlenerek girmek isteyenler için en güzel fikirler.
                             </p>
-                            <a href="#" class="btn btn-secondary">
+                            <a href="category/newyear" class="btn btn-secondary">
                                 İncele
                             </a>
                         </div>
@@ -87,7 +87,7 @@
                             <p class="card-comment">
                                 Kültür ve sanata ait tüm geziler.
                             </p>
-                            <a href="#" class="btn btn-secondary">
+                            <a href="category/culture" class="btn btn-secondary">
                                 İncele
                             </a>
                         </div>
@@ -103,7 +103,7 @@
                             <p class="card-comment">
                                 Kar tatilini özleyenlere.
                             </p>
-                            <a href="#" class="btn btn-secondary">
+                            <a href="category/semester" class="btn btn-secondary">
                                 İncele
                             </a>
                         </div>
@@ -119,7 +119,7 @@
                             <p class="card-comment">
                                 Yazın sıcağını nerede yaşamak isterseniz.
                             </p>
-                            <a href="#" class="btn btn-secondary">
+                            <a href="category/summer" class="btn btn-secondary">
                                 İncele
                             </a>
                         </div>

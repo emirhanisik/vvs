@@ -484,4 +484,43 @@ class PostsController extends Controller
       DB::table('comments')->where('id','=',$id)->delete();
       return redirect('posts')->with('success','Yorum Başarıyla Kaldırıldı.');
     }
-}
+
+    public function familyCategory(){
+
+      $posts = Post::orderBy('created_at','desc')->where('category_id', '=' , 1)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('category.family')->with('posts',$posts); 
+    }
+
+    public function friendCategory(){
+
+      $posts = Post::orderBy('created_at','desc')->where('category_id', '=' , 2)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('category.friend')->with('posts',$posts); 
+    }
+
+    public function newyearCategory(){
+
+      $posts = Post::orderBy('created_at','desc')->where('category_id', '=' , 3)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('category.newyear')->with('posts',$posts); 
+    }
+    public function cultureCategory(){
+
+      $posts = Post::orderBy('created_at','desc')->where('category_id', '=' , 4)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('category.culture')->with('posts',$posts); 
+    }
+    public function semesterCategory(){
+
+      $posts = Post::orderBy('created_at','desc')->where('category_id', '=' , 5)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('category.semester')->with('posts',$posts); 
+    }
+    public function summerCategory(){
+
+      $posts = Post::orderBy('created_at','desc')->where('category_id', '=' , 6)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('category.summer')->with('posts',$posts); 
+    }
+   }
