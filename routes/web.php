@@ -64,3 +64,5 @@ Route::get('/category/newyear', 'PostsController@newyearCategory');
 Route::get('/category/culture', 'PostsController@cultureCategory');
 Route::get('/category/semester', 'PostsController@semesterCategory');
 Route::get('/category/summer', 'PostsController@summerCategory');
+
+Route::resource('notifications','NotificationController');

@@ -64,6 +64,8 @@
                                 <a class="dropdown-item" href="/profile/show">Profil Düzenle</a>
                                 <a class="dropdown-item" href="/dashboard">Kontrol Paneli</a>
                                 <a class="dropdown-item" href="/favorite">Favoriler</a>
+                                <a class="dropdown-item" href="/notifications/create">Şikayet ve Öneriler</a>
+
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
