@@ -51,7 +51,10 @@
             <div class="d-flex flex-row align-items-center">
                 <p>
                     <i class="fas fa-map-marker-alt mr-2"></i>
-                    <span>{{$post->city}}</span></p>
+                    <span>{{$post->city['CityName']}}</span> 
+                    <span>{{$post->city['CountryName']}}</span> 
+
+                    
                 <p>
                     <i class="fas fa-clock mr-2"></i>
                     <span>{{$post->trip_day}}</span></p>

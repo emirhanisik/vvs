@@ -18,11 +18,6 @@
             </div>
 
             <div class="form-group  col-12 col-md-6">
-                {{Form::label('city','Şehir')}}
-                {{Form::text('city',$post->city,['class'=>'form-control','placeholder'=>'Amsterdam'])}}
-            </div>
-
-            <div class="form-group  col-12 col-md-6">
                 {{Form::label('category_id','Kategori')}}
                 <select class="form-control" name="category_id" >
 
@@ -42,6 +37,17 @@
                 {{Form::label('trip_fee','Seyahat Tutarı')}}
                 {{Form::text('trip_fee',$post->trip_fee,['class'=>'form-control','placeholder'=>'5.600,750 ₺'])}}
             </div>  
+
+            <div class="form-group  col-12 col-md-6">
+                {{Form::label('city','Şehir')}}
+                <select class="form-control" name="city_id" >
+
+                    @foreach ($city as $secret=>$newvalue)
+                <option value="{{$newvalue->id}}">{{$newvalue->CityName}}</option>
+                    @endforeach
+
+                </select>
+            </div>
             <div class="col-12 col-md-6">
                 <label>Kapak Resminizi Ekleyin</label>
                 <div class="input-group">

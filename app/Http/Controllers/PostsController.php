@@ -10,6 +10,7 @@ Use App\User;
 Use App\Comment;
 Use App\Favorites;
 Use App\Category;
+Use App\City;
 
 class PostsController extends Controller
 {
@@ -52,7 +53,8 @@ class PostsController extends Controller
     {
        $post = Post::all();
        $cat = Category::all();
-        return view('posts.create', ['post' => $post, 'cat' =>$cat]);
+       $city = City::all();
+        return view('posts.create', ['post' => $post, 'cat' =>$cat , 'city' =>$city]);
     }
 
     /**
@@ -72,7 +74,6 @@ class PostsController extends Controller
             'image2' =>'image|nullable|max:1999',
             'image3' =>'image|nullable|max:1999',
             'image4' =>'image|nullable|max:1999',
-            'city'=>'required',
             'trip_fee'=>'required',
             'trip_day'=>'required'
            
@@ -186,7 +187,6 @@ class PostsController extends Controller
          $post = new Post;
          $post ->title = $request->input('title');
          $post ->body = $request->input('body');
-         $post ->city= $request->input('city');
          $post ->trip_day= $request->input('trip_day');
          $post ->trip_fee= $request->input('trip_fee');
          $post->user_id = auth()->user()->id;
@@ -196,6 +196,8 @@ class PostsController extends Controller
          $post->image3 = $fileNameToStore3;
          $post->image4 = $fileNameToStore4;
          $post->category_id = $request->category_id;
+         $post->city_id = $request->city_id;
+
          $post ->save();
 
          return redirect('/posts')->with('success', 'Post Created');
@@ -232,6 +234,7 @@ class PostsController extends Controller
     {
         $post = Post::find($id);
         $cat = Category::all();
+        $city = City::all();
 
         //Doğru kullanıcı için doğrulama - Check for correct user!!!
          if( auth()->user()->id !== $post->user_id){
@@ -239,7 +242,7 @@ class PostsController extends Controller
             return redirect('/posts')->with('error','Unauthorized Page!!');
         }
         
-        return view('posts.edit', ['post'=>$post, 'cat'=>$cat]);//->with('post',$post);
+        return view('posts.edit', ['post'=>$post, 'cat'=>$cat , 'city'=>$city]);//->with('post',$post);
         
     }
 
@@ -261,7 +264,6 @@ class PostsController extends Controller
             'image2' =>'image|nullable|max:1999',
             'image3' =>'image|nullable|max:1999',
             'image4' =>'image|nullable|max:1999',
-            'city'=>'required',
             'trip_fee'=>'required',
             'trip_day'=>'required'
             
@@ -371,7 +373,6 @@ class PostsController extends Controller
          $post = Post::find($id);
          $post ->title = $request->input('title');
          $post ->body = $request->input('body');
-         $post ->city= $request->input('city');
          $post ->trip_day= $request->input('trip_day');
          $post ->trip_fee= $request->input('trip_fee');
          if($request->hasFile('cover_image')){

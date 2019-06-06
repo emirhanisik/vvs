@@ -23,7 +23,6 @@ class Post extends Model
         'image2',
         'image3',
         'image4',
-        'city',
         'trip_day',
         'trip_fee',
         'trip_type'
@@ -43,5 +42,9 @@ class Post extends Model
     public function category(){
 
         return $this->belongsTo('App\Category', 'category_id');
+    }
+    public function city(){
+
+        return $this->belongsTo('App\City', 'city_id');
     }
 }
