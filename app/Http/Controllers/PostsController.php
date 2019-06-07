@@ -524,4 +524,150 @@ class PostsController extends Controller
        // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
         return view('category.summer')->with('posts',$posts); 
     }
+
+    //Popüler Şehirler
+    public function ankara(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 1)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.ankara')->with('posts',$posts); 
+    }
+    public function istanbul(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 2)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.istanbul')->with('posts',$posts); 
+    }
+    public function izmir(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 3)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.izmir')->with('posts',$posts); 
+    }
+    public function antalya(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 7)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.antalya')->with('posts',$posts); 
+    }
+    public function paris(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 16)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.paris')->with('posts',$posts); 
+    }
+    public function berlin(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 21)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.berlin')->with('posts',$posts); 
+    }
+    public function newyork(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 28)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.newyork')->with('posts',$posts); 
+    }
+    public function losangeles(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 30)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.losangeles')->with('posts',$posts); 
+    }
+    public function viyana(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 35)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.viyana')->with('posts',$posts); 
+    }
+    public function sydney(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 38)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.sydney')->with('posts',$posts); 
+    }
+    public function dubai(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 41)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.dubai')->with('posts',$posts); 
+    }
+    public function rio(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 45)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.rio')->with('posts',$posts); 
+    }
+    public function prag(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 51)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.prag')->with('posts',$posts); 
+    }
+    public function marakes(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 55)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.marakes')->with('posts',$posts); 
+    }
+    public function amsterdam(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 63)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.amsterdam')->with('posts',$posts); 
+    }
+    public function londra(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 66)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.londra')->with('posts',$posts); 
+    }
+    public function barcelona(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 71)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.barcelona')->with('posts',$posts); 
+    }
+    public function madrid(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 72)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.madrid')->with('posts',$posts); 
+    }
+    public function roma(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 77)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.roma')->with('posts',$posts); 
+    }
+    public function venedik(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 78)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.venedik')->with('posts',$posts); 
+    }
+    public function porto(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 92)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.porto')->with('posts',$posts); 
+    }
+    public function moskova(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 93)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.moskova')->with('posts',$posts); 
+    }
+    public function kiev(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 101)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.kiev')->with('posts',$posts); 
+    }
+    public function belgrad(){
+
+      $posts = Post::orderBy('created_at','desc')->where('city_id', '=' , 96)->paginate(10);
+       // $posts = Post::orderBy('title','desc')->get(); //asc -> ascend desc->descend
+        return view('city.belgrad')->with('posts',$posts); 
+    }
    }

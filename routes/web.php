@@ -58,6 +58,8 @@ Route::get('/posts/favorites','PostsController@view_favorites');
 Route::get('/removeFavorite/{id}','PostsController@removeFavorite');
 Route::get('/removeComment/{id}','PostsController@removeComment');
 
+
+//Category Routes
 Route::get('/category/family', 'PostsController@familyCategory');
 Route::get('/category/friend', 'PostsController@friendCategory');
 Route::get('/category/newyear', 'PostsController@newyearCategory');
@@ -66,3 +68,29 @@ Route::get('/category/semester', 'PostsController@semesterCategory');
 Route::get('/category/summer', 'PostsController@summerCategory');
 
 Route::resource('notifications','NotificationController');
+
+//City Routes
+Route::get('/city/istanbul', 'PostsController@istanbul');
+Route::get('/city/ankara', 'PostsController@ankara');
+Route::get('/city/izmir', 'PostsController@izmir');
+Route::get('/city/antalya', 'PostsController@antalya');
+Route::get('/city/paris', 'PostsController@paris');
+Route::get('/city/berlin', 'PostsController@berlin');
+Route::get('/city/newyork', 'PostsController@newyork');
+Route::get('/city/losangeles', 'PostsController@losangeles');
+Route::get('/city/viyana', 'PostsController@viyana');
+Route::get('/city/sydney', 'PostsController@sydney');
+Route::get('/city/dubai', 'PostsController@dubai');
+Route::get('/city/rio', 'PostsController@rio');
+Route::get('/city/prag', 'PostsController@prag');
+Route::get('/city/marakes', 'PostsController@marakes');
+Route::get('/city/amsterdam', 'PostsController@amsterdam');
+Route::get('/city/londra', 'PostsController@londra');
+Route::get('/city/barcelona', 'PostsController@barcelona');
+Route::get('/city/madrid', 'PostsController@madrid');
+Route::get('/city/roma', 'PostsController@roma');
+Route::get('/city/venedik', 'PostsController@venedik');
+Route::get('/city/porto', 'PostsController@porto');
+Route::get('/city/moskova', 'PostsController@moskova');
+Route::get('/city/kiev', 'PostsController@kiev');
+Route::get('/city/belgrad', 'PostsController@belgrad');
