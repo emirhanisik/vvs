@@ -32,7 +32,7 @@
                     <a class="nav-link" href="/about">Hakkımızda</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="/services">Hizmetler</a>
+                    <a class="nav-link" href="/services">Popüler Şehirler</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="/posts">Bloglar</a>

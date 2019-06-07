@@ -17,7 +17,7 @@ class ProfileController extends Controller
 
     public function show_page($id){
         $user = User::find($id);
-        return view('profile.index')->with(['posts' => $user->posts, 'user' => $user]);
+        return view('profile.index')->with(['posts' => $user->posts, 'user' => $user,'comments'=>$user->comments]);
     }
 
     

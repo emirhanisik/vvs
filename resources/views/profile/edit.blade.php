@@ -24,7 +24,8 @@
             {{Form::label('name', 'Isim')}}
             {{Form::text('name', Auth()->user()->name , ['class' => 'form-control', 'placeholder' => 'İsim'])}}
         </div>
-
+        <h1>Şifre Değiştir</h1>
+        <hr>
         <div class = "form-group">
             {{Form::password('password', ['id'=> 'password','class' => 'form-control', 'placeholder' => 'Sifre'])}}
     </div>
@@ -32,13 +33,7 @@
     <div class = "form-group">
         {{Form::password('confirmation', ['id'=> 'confirmation','class' => 'form-control', 'placeholder' => 'Sifre Tekrar'])}}
     </div>
-
-    <div class="form-group">
-        {{Form::label('profile_image', 'Profil Resmi')}}
-        {{Form::file('profile_image')}}
-
-    </div>
-
+    <hr>
         <h3>Adress Bilgileri</h3>
         <div class = "form-group">
             {{Form::label('city', 'Şehir')}}
@@ -56,14 +51,19 @@
         <H3>Kişisel Bilgiler</H3>
 
         <div class = "form-group">
-            {{Form::label('bio', 'Biyografi')}}
-            {{Form::textarea('bio', Auth()->user()->bio , ['class' => 'form-control', 'placeholder' => 'Biyografi'])}}
+            {{Form::label('bio', 'Gezi Mottosu')}}
+            {{Form::textarea('bio', Auth()->user()->bio , ['class' => 'form-control', 'placeholder' => 'Gezi Mottosu'])}}
         </div>
 
         <div class = "form-group">
             {{Form::label('gender', 'Cinsiyet')}}
             {{Form::text('gender', Auth()->user()->gender , ['class' => 'form-control', 'placeholder' => 'Cinsiyet'])}}
         </div>
+        <div class="form-group">
+                {{Form::label('profile_image', 'Profil Resmi')}}
+                {{Form::file('profile_image')}}
+        
+            </div>
        
        
 

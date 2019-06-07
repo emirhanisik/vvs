@@ -52,14 +52,49 @@
                 <div>
                         {{$user->bio}}
                 </div>
-
             </div>
         </div>
     </div>
+<div>
 
-@if (count($posts) == 0)
-    <?php echo 'Golden Üye'?>
-@endif
+        Yazılan Blog Sayısı <?php echo count($posts)?>
+        Yazilan Yorum Sayisi <?php echo count($comments)?>
+    <hr>
+    <h3 class="section-heading">Rozetler</h3>
+
+    @if(count($posts) >= 0)
+    <p>Yeni Üye</p> <img src="https://img.icons8.com/color/48/000000/groups.png">
+     @endif
+       
+    @if (count($posts) >= 1)
+    <hr>
+    <p>Ilk Paylasim</p>  <img src="https://img.icons8.com/color/48/000000/medal2.png">
+    @endif
+    
+    @if (count($posts) >= 5)
+    <hr>
+    <p>Çırak Yazar</p> <img src="https://img.icons8.com/color/48/000000/corporal-cpl.png">
+    <hr>
+    <p>Gezgin</p> <img src="https://img.icons8.com/color/48/000000/eiffel-tower.png">
+    @endif
+    
+    @if (count($posts) >= 7)
+    <hr>
+    <p>Yerinde Durmayan</p> <img src="https://img.icons8.com/color/48/000000/worldwide-location.png">
+    <hr>
+    <p>Usta Yazar</p> <img src="https://img.icons8.com/color/48/000000/sergeant-major-sgt.png">
+    @endif
+    
+   @if (count($comments)>=1)
+   <hr>
+    <p>Meraklı</p> <img src="https://img.icons8.com/color/48/000000/speech-bubble-with-dots.png">
+   @endif
+   
+   @if (count($comments)>=5)
+   <hr>
+   <p>Eleştirmen</p>  <img src="https://img.icons8.com/color/48/000000/critical-thinking.png">
+  @endif
+</div>
 
     <section class="section col-12">
 
