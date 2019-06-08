@@ -53,8 +53,10 @@
                                         <i class="fas fa-clock"></i>
                                         {{$favorite->created_at}}
                                     </small>
+                                    <p>
+                                        <a href="/removeFavorite/{{$favorite->post_id}}" style="color:red">Favorilerden Kaldır</a>
+                                    </p>
                                 </div>
-                                <a href="/removeFavorite/{{$favorite->post_id}}" style="color:red">Favorilerden Kaldır</a>
                             </div>
                        
                         </div>                    

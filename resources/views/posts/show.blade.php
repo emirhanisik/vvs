@@ -68,14 +68,14 @@
                 </p>
             </div>
             <p>
-                Bu blog {{$post->created_at}} {{$post->user->name}} tarafından yazıldı.
+                Bu post {{$post->created_at}} {{$post->user->name}} tarafından yazıldı.
             </p>
 
         </div>
 
         <div>
 
-            <h3>Geziyi Anlat</h3>
+           {{--  <h3>Geziyi Anlat</h3> --}}
             <p>{!!$post->body!!}</p>
         </div>
         <hr>
@@ -102,25 +102,7 @@
                 >
             </div>
         </div>
-      
-        <hr>
 
-        <div class="d-flex flex-row align-items-center justify-content-end">
-            @if(!Auth::guest())
-                @if(Auth::user()->id == $post->user_id)
-                    <a href="/posts/{{$post->id}}/edit" class="btn btn-success mr-2">
-                        Düzenle
-                    </a>
-                    
-                    {!!Form::open(['action' =>['PostsController@destroy', $post->id] ,'method'=>'POST', 'class' => 'mb-0'])!!}
-                        {{Form::hidden('_method', 'Delete')}}
-                        {{Form::submit('Delete' , ['class' => 'btn btn-danger'])}}
-                    {!!Form::close() !!}
-                @endif   
-            @endif
-        </div>
-
-        <hr>
         <?php
                             //wishlist Code start
         if(Auth::check()){
@@ -136,23 +118,30 @@
 
 
     <?php } else {?>
-        <h5 style="color:green"> <a href="{{url('/favorite')}}">Favorilere</a> Eklendi </h5>
+        <p class="fg--green"> <a href="{{url('/favorite')}}">Favorilere</a> Eklendi </p>
       <?php }
         }?>
 
     <hr>
-    <hr>
-        <h3>YORUMLAR</h3>
+        <h3>Yorumlar</h3>
         @if(count($comments)>0)
             @foreach ($comments->all() as $comment)
-            <p>{{$comment->comment}}</p>
-            <p>Yorumu Yapan: {{$comment->name}}</p>
-            @if(!Auth::guest())
-            @if(Auth::user()->id == $comment->user_id)
-            
-            <a href="/removeComment/{{$comment->id}}" style="color:red">Yorumu Sil</a>
-            @endif
-            @endif
+
+            <div class="comment">
+                <p class="commentator-name">{{$comment->name}}</p>
+                <p class="commentator-comment">{{$comment->comment}}</p>
+
+                @if(!Auth::guest())
+                    @if(Auth::user()->id == $comment->user_id)
+                    
+                    <a class="commentator-remove" href="/removeComment/{{$comment->id}}">
+                        <i class="fas fa-trash-alt"></i>
+                    </a>
+                    @endif
+                @endif
+
+            </div>
+
             @endforeach
 
         @else

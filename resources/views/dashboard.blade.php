@@ -1,50 +1,55 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-                <h1>Posts</h1>
-                 <br> 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8 offset-md-2">
+                    <h1 class="section-heading">Kontrol Paneli</h1>
 
-                    <a href="/posts/create" class="btn btn-primary">Create Post</a>
-                    <br>
-                    <br>
-                    <h3>Your Blog Posts</h3>
-                        @if(count($posts)>0)
-                        <table class="table table-striped">
-                                  
-                            @foreach ($posts as $post)
-                                <tr>
-                                    <td>
-                                            <img style="width :70%" src="/storage/cover_images/{{$post->cover_image}}">
-                                        </td>
-                                    <td> <h3><a href="/posts/{{$post->id}}"> {{$post->title}}</a></h3></td>
-                                    <td><a href="/posts/{{$post->id}}/edit" class="btn btn-primary">Edit</a></td>
-                                    <td>
-                                    {!!Form::open(['action' =>['PostsController@destroy', $post->id] ,'method'=>'POST', 'class' => 'pull-right'])!!}
-                                    {{Form::hidden('_method', 'Delete')}}
-                                    {{Form::submit('Delete' , ['class' => 'btn btn-danger'])}}
-                                    {!!Form::close() !!}  
+                    <div class="card-body">
+                        @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+
+                        <h3>Blog Postlarınız</h3>
+                            @if(count($posts)>0)
+                            <div class="table-dashboard">
                                     
-                                    </td> 
-                                </tr>
-                            @endforeach   
-                        </table>
-                        @else 
-                        <p>You have no blog post !!</p>
-                    @endif 
-                </div>
+                                @foreach ($posts as $post)
+                                    <div class="table-card">
+                                        <div>
+                                            <img src="/storage/cover_images/{{$post->cover_image}}">
+                                        </div>
+
+                                        <div>
+                                            <h3>
+                                                <a href="/posts/{{$post->id}}"> {{$post->title}}</a>
+                                            </h3>
+                                        </div>
+
+                                        <div style="flex: 1">
+                                        </div>
+
+                                        <div class="d-flex flex-row">
+                                            <a href="/posts/{{$post->id}}/edit" class="btn btn-primary mr-2">Düzenle</a>
+
+                                            {!!Form::open(['action' =>['PostsController@destroy', $post->id] ,'method'=>'POST', 'class' => 'pull-right'])!!}
+                                            {{Form::hidden('_method', 'Delete')}}
+                                            {{Form::submit('Sil' , ['class' => 'btn btn-danger'])}}
+                                            {!!Form::close() !!}
+                                        </div> 
+                                    </div>
+                                @endforeach   
+                            </div>
+                            @else 
+                            <p>You have no blog post !!</p>
+                        @endif 
+                    </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 @endsection

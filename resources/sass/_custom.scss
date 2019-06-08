@@ -2,7 +2,7 @@ $color-green: #a5c05b;
 $color-blue: #375e97;
 $color-dark: #232122;
 $color-grey: #dddede;
-$color-white: #FFFFFF;
+$color-white: #ffffff;
 
 $main-colors: ();
 
@@ -12,13 +12,12 @@ $main-colors: map-merge(
         "blue": $color-blue,
         "dark": $color-dark,
         "grey": $color-grey,
-        "white": $color-white,
+        "white": $color-white
     ),
     $main-colors
 );
 
 @each $color, $value in $main-colors {
-
     .fg--#{$color} {
         color: $value !important;
     }
@@ -44,5 +43,123 @@ $main-colors: map-merge(
         & .nav-link {
             color: white !important;
         }
+    }
+}
+
+.profile {
+    &-bio {
+        max-width: 694px;
+        padding: 16px 0;
+        margin-top: 12px;
+        position: relative;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: $color-grey;
+            width: 50px;
+            height: 2px;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background: $color-grey;
+            width: 25px;
+            height: 2px;
+        }
+    }
+
+    &-badges {
+        display: flex;
+        flex-direction: column;
+
+        & div > div {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 8px;
+        }
+    }
+}
+
+.comment {
+    border: 1px solid $color-grey;
+    border-radius: 4px;
+    padding: 4px 8px;
+    position: relative;
+
+    &:not(:last-child) {
+        margin-bottom: 12px;
+    }
+}
+
+.commentator {
+    &-name {
+        font-weight: bold;
+        font-size: 14px;
+        color: $color-blue;
+        margin-bottom: 4px;
+    }
+
+    &-comment {
+        margin-bottom: 4px;
+        padding-left: 8px;
+    }
+
+    &-remove {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 24px;
+        height: 24px;
+        background: transparent;
+        border-bottom-left-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            color: red;
+            font-size: 12px;
+        }
+    }
+}
+
+.table-dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .table-card {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: .5rem;
+
+        &:hover {
+            background: #fafafa;
+        }
+
+        & > div:first-child {
+            padding-right: 16px;
+        }
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
     }
 }

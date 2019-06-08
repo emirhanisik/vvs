@@ -10704,15 +10704,15 @@ a.text-dark:focus {
 }
 
 .fg--white {
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 
 .bg--white {
-  background-color: #FFFFFF !important;
+  background-color: #ffffff !important;
 }
 
 .bc--white {
-  border-color: #FFFFFF !important;
+  border-color: #ffffff !important;
 }
 
 .navbar-laravel {
@@ -10724,5 +10724,122 @@ a.text-dark:focus {
 .navbar-light .navbar-brand,
 .navbar-light .nav-link {
   color: white !important;
+}
+
+.profile-bio {
+  max-width: 694px;
+  padding: 16px 0;
+  margin-top: 12px;
+  position: relative;
+}
+
+.profile-bio:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #dddede;
+  width: 50px;
+  height: 2px;
+}
+
+.profile-bio:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #dddede;
+  width: 25px;
+  height: 2px;
+}
+
+.profile-badges {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-badges div > div {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+}
+
+.comment {
+  border: 1px solid #dddede;
+  border-radius: 4px;
+  padding: 4px 8px;
+  position: relative;
+}
+
+.comment:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.commentator-name {
+  font-weight: bold;
+  font-size: 14px;
+  color: #375e97;
+  margin-bottom: 4px;
+}
+
+.commentator-comment {
+  margin-bottom: 4px;
+  padding-left: 8px;
+}
+
+.commentator-remove {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border-bottom-left-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.commentator-remove i {
+  color: red;
+  font-size: 12px;
+}
+
+.table-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.table-dashboard .table-card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.table-dashboard .table-card:hover {
+  background: #fafafa;
+}
+
+.table-dashboard .table-card > div:first-child {
+  padding-right: 16px;
+}
+
+.table-dashboard img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
