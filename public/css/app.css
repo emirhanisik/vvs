@@ -10887,3 +10887,26 @@ a.text-dark:focus {
   border-radius: 100px;
 }
 
+.share-post a {
+  color: white;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.share-post a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.share-post a.fb {
+  background: #3b5998;
+}
+
+.share-post a.tw {
+  background: #1da1f2;
+}
+
+.share-post a.tmb {
+  background: #35465c;
+}
+

@@ -150,6 +150,21 @@
 
             </div>
 
+            <hr />
+
+            <div class="share-post">
+                <h3 class="mb-3">Paylaş</h3>
+                <a class="fb" href="#">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+                <a class="tw" href="#">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+                <a class="tmb" href="#">
+                    <i class="fab fa-tumblr"></i> Tumblr
+                </a>
+            </div>
+
             @endforeach
 
         @else

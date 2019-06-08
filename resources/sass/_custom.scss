@@ -139,7 +139,7 @@ $main-colors: map-merge(
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: .5rem;
+        padding: 0.5rem;
 
         &:hover {
             background: #fafafa;
@@ -169,7 +169,7 @@ $main-colors: map-merge(
     td {
         font-weight: 400;
         font-size: 14px;
-        color: rgba($color-dark, .8);
+        color: rgba($color-dark, 0.8);
     }
 }
 
@@ -178,11 +178,9 @@ $main-colors: map-merge(
     padding: 0;
     padding-left: 4px;
 
-
     li {
-
         a {
-            color: rgba($color-dark, .8);
+            color: rgba($color-dark, 0.8);
 
             &:hover {
                 color: $color-dark;
@@ -192,11 +190,33 @@ $main-colors: map-merge(
 }
 
 .our-img {
-
     img {
         width: 120px;
         height: 120px;
         object-fit: cover;
         border-radius: 100px;
+    }
+}
+
+.share-post a {
+    color: white;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+
+    &:not(:last-child) {
+        margin-right: 1rem;
+    }
+
+    &.fb {
+        background: #3b5998;
+    }
+
+    &.tw {
+        background: #1da1f2;
+    }
+
+    &.tmb {
+        background: #35465c;
     }
 }
