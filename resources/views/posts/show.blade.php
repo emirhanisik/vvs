@@ -82,24 +82,32 @@
 
         <div class="row">
             <div class="col-12 col-md-4">
-                <img class="blog-image card img-cover"
-                    src="/storage/post_images/{{$post->image1}}"
-                />
+                <a href="/storage/post_images/{{$post->image1}}">
+                    <img class="blog-image card img-cover"
+                        src="/storage/post_images/{{$post->image1}}"
+                    />
+                </a>
             </div>
             <div class="col-12 col-md-4">
-                <img class="blog-image card img-cover"
-                    src="/storage/post_images/{{$post->image2}}"
-                >
+                <a href="/storage/post_images/{{$post->image2}}">
+                    <img class="blog-image card img-cover"
+                        src="/storage/post_images/{{$post->image2}}"
+                    >
+                </a>
             </div>
             <div class="col-12 col-md-4">
-                <img class="blog-image card img-cover"
-                    src="/storage/post_images/{{$post->image3}}"
-                >
+                <a href="/storage/post_images/{{$post->image3}}">
+                    <img class="blog-image card img-cover"
+                        src="/storage/post_images/{{$post->image3}}"
+                    >
+                </a>
             </div>
             <div class="col-12 col-md-4">
-                <img class="blog-image card img-cover"
-                    src="/storage/post_images/{{$post->image4}}"
-                >
+                <a href="/storage/post_images/{{$post->image4}}">
+                    <img class="blog-image card img-cover"
+                        src="/storage/post_images/{{$post->image4}}"
+                    >
+                </a>
             </div>
         </div>
 

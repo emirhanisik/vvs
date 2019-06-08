@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <section class="section video bg--green">
+    <section class="section video bg--orange">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-12 col-md-6">
@@ -32,7 +32,7 @@
                     <p class="text-right fg--white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quia perspiciatis voluptatibus, tempora aspernatur nesciunt ea odio doloribus amet nihil, error et eos rerum labore, corrupti voluptatem vel accusamus unde!</p>
                 </div>
                 <div class="col-12 col-md-6">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RcmrbNRK-jY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="shadow" width="100%" height="315" src="https://www.youtube.com/embed/RcmrbNRK-jY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>

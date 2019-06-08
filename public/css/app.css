@@ -10679,6 +10679,18 @@ a.text-dark:focus {
   border-color: #375e97 !important;
 }
 
+.fg--orange {
+  color: #f7a901 !important;
+}
+
+.bg--orange {
+  background-color: #f7a901 !important;
+}
+
+.bc--orange {
+  border-color: #f7a901 !important;
+}
+
 .fg--dark {
   color: #232122 !important;
 }
@@ -10716,14 +10728,8 @@ a.text-dark:focus {
 }
 
 .navbar-laravel {
-  background-color: #375e97;
-  color: white;
+  background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
-
-.navbar-light .navbar-brand,
-.navbar-light .nav-link {
-  color: white !important;
 }
 
 .profile-bio {
@@ -10841,5 +10847,43 @@ a.text-dark:focus {
   height: 100px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.footer {
+  background: #fafafa;
+}
+
+.footer h1 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.footer p,
+.footer td {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(35, 33, 34, 0.8);
+}
+
+.site-map {
+  list-style-type: none;
+  padding: 0;
+  padding-left: 4px;
+}
+
+.site-map li a {
+  color: rgba(35, 33, 34, 0.8);
+}
+
+.site-map li a:hover {
+  color: #232122;
+}
+
+.our-img img {
+  width: 120px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100px;
 }
 
