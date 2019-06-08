@@ -2,8 +2,8 @@
 {{-- HERO SECTION --}}
 @section('content')
     <div class="hero py-5 d-flex flex-column align-items-center justify-content-center">
-        <h1 class="display-1 text-center">Keşfet ve Anlat</h1>
-        <p>Veni Vidi Scripsi Online Paylaşım Platformu</p>
+        <h1 class="display-1 text-center">Veni Vidi Scripsi</h1>
+        <p>Online Paylaşım Platformu</p>
         <div>
             <form method="POST" action="{{url("/search")}}">
                 {{ csrf_field() }}
@@ -21,6 +21,23 @@
             </div>
         </div>
     </div>
+
+    <section class="section video bg--green">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6">
+                    <h1 class="section-heading text-right fg--white">
+                        En önemli anlarınızı paylaşın
+                    </h1>
+                    <p class="text-right fg--white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quia perspiciatis voluptatibus, tempora aspernatur nesciunt ea odio doloribus amet nihil, error et eos rerum labore, corrupti voluptatem vel accusamus unde!</p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RcmrbNRK-jY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section categories text-center">
         <div class="container">
             <div class="row">
