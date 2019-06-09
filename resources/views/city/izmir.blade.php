@@ -73,7 +73,7 @@
                         @endforeach
                         {{$posts->links()}} <!--Pagination için koyduk!-->
                     @else
-                            <p>No post found !</p>
+                            <p>Blog bulunamadı !</p>
                     @endif
                     
                     

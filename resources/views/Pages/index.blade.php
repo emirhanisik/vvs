@@ -29,7 +29,7 @@
                     <h1 class="section-heading text-right fg--white">
                         En önemli anlarınızı paylaşın
                     </h1>
-                    <p class="text-right fg--white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quia perspiciatis voluptatibus, tempora aspernatur nesciunt ea odio doloribus amet nihil, error et eos rerum labore, corrupti voluptatem vel accusamus unde!</p>
+                    <p class="text-right fg--white">Veni Vidi Scripsi’nin amacı, insanların gitmek istedikleri şehirler/ülkeler hakkında ihtiyaçları olan bilgilere ulaşması ve yaşadıkları gezi deneyimlerini paylaşmaları için kullanıcılara bir web platformu sağlamaktır. </p>
                 </div>
                 <div class="col-12 col-md-6">
                     <iframe class="shadow" width="100%" height="315" src="https://www.youtube.com/embed/RcmrbNRK-jY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -147,21 +147,21 @@
                             <div class="row">
                                 <div class="col-12">
                                     <h1 class="section-heading">
-                                        Bölgeler
+                                        Popüler Şehirler
                                     </h1>
                                 </div>
                                 <div class="col-4">
                                     <div class="card categories-card">
-                                        <img src="../../img/cat-family.jpg" class="card-img-top" alt="image">
+                                        <img src="../../img/antalya.jpg" class="card-img-top" alt="image">
                                         <div class="card-body">
                                             <h5 class="card-title">
-                                                Asya
+                                                Antalya
                                             </h5>
                                             <p class="card-comment">
-                                               Asya'yı keşfet <br>
-                                               Uzak Doğu'ya yolculuk.
+                                               Deniz,Kum,Güneş <br>
+                                              Rüya dolu bir tatil için hemen Antalya'yı keşfet
                                             </p>
-                                            <a href="#" class="btn btn-secondary">
+                                            <a href="city/antalya" class="btn btn-secondary">
                                                 İncele
                                             </a>
                                         </div>
@@ -169,15 +169,15 @@
                                 </div>
                                 <div class="col-4">
                                     <div class="card categories-card">
-                                        <img src="../../img/ark.jpeg" class="card-img-top" alt="image">
+                                        <img src="../../img/paris.jpg" class="card-img-top" alt="image">
                                         <div class="card-body">
                                             <h5 class="card-title">
-                                                Avrupa
+                                                Paris
                                             </h5>
                                             <p class="card-comment">
-                                                Avrupa yapabileceğin tatil önerilerini kaçırma.
+                                                Sanatın mimari ile buluştuğu aşıklar kenti Paris'i keşfet
                                             </p>
-                                            <a href="#" class="btn btn-secondary">
+                                            <a href="city/paris" class="btn btn-secondary">
                                                 İncele
                                             </a>
                                         </div>
@@ -185,69 +185,23 @@
                                 </div>
                                 <div class="col-4">
                                     <div class="card categories-card">
-                                        <img src="../../img/chrs.jpeg" class="card-img-top" alt="image">
+                                        <img src="../../img/amsterdam.jpeg" class="card-img-top" alt="image">
                                         <div class="card-body">
                                             <h5 class="card-title">
-                                                Güney Amerika
+                                                Amsterdam
                                             </h5>
                                             <p class="card-comment">
-                                               Tarih,doğa,eğlence <br>
-                                               Güney Amerika keşfedilmeyi Bekliyor.
+                                            Tarih ve eğlencenin bir arada olduğu Amsterdam'ı keşfet
                                             </p>
-                                            <a href="#" class="btn btn-secondary">
+                                            <a href="city/amsterdam" class="btn btn-secondary">
                                                 İncele
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-4">
-                                    <div class="card categories-card">
-                                        <img src="../../img/sanat.jpeg" class="card-img-top" alt="image">
-                                        <div class="card-body">
-                                            <h5 class="card-title">
-                                                Kuzey Amerika
-                                            </h5>
-                                            <p class="card-comment">
-                                                Macera dolu Amerika.
-                                            </p>
-                                            <a href="#" class="btn btn-secondary">
-                                                İncele
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="card categories-card">
-                                        <img src="../../img/snow.jpeg" class="card-img-top" alt="image">
-                                        <div class="card-body">
-                                            <h5 class="card-title">
-                                                Afrika
-                                            </h5>
-                                            <p class="card-comment">
-                                                Doğa ve tatil iç içe. 
-                                            </p>
-                                            <a href="#" class="btn btn-secondary">
-                                                İncele
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="card categories-card">
-                                        <img src="../../img/yazzz.jpeg" class="card-img-top" alt="image">
-                                        <div class="card-body">
-                                            <h5 class="card-title">
-                                                Türkiye
-                                            </h5>
-                                            <p class="card-comment">
-                                                Yazın sıcağını nerede yaşamak isterseniz.
-                                            </p>
-                                            <a href="#" class="btn btn-secondary">
-                                                İncele
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                                
+                                
+                                
 
            
            

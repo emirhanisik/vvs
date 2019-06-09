@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-4">
                     <div class="card categories-card">
-                        <img src="../../img/cat-family.jpg" class="card-img-top" alt="image">
+                        <img src="../../img/istanbul.jpg" class="card-img-top" alt="image">
                         <div class="card-body">
                             <h5 class="card-title">
                                 İstanbul
@@ -29,7 +29,7 @@
                 </div>
                 <div class="col-4">
                     <div class="card categories-card">
-                        <img src="../../img/ark.jpeg" class="card-img-top" alt="image">
+                        <img src="../../img/ankara.jpg" class="card-img-top" alt="image">
                         <div class="card-body">
                             <h5 class="card-title">
                                 Ankara
@@ -45,7 +45,7 @@
                 </div>
                 <div class="col-4">
                     <div class="card categories-card">
-                        <img src="../../img/chrs.jpeg" class="card-img-top" alt="image">
+                        <img src="../../img/izmirj.jpg" class="card-img-top" alt="image">
                         <div class="card-body">
                             <h5 class="card-title">
                                 İzmir
@@ -61,7 +61,7 @@
                 </div>
                 <div class="col-4">
                     <div class="card categories-card">
-                        <img src="../../img/sanat.jpeg" class="card-img-top" alt="image">
+                        <img src="../../img/antalya.jpg" class="card-img-top" alt="image">
                         <div class="card-body">
                             <h5 class="card-title">
                                 Antalya
@@ -77,7 +77,7 @@
                 </div>
                 <div class="col-4">
                     <div class="card categories-card">
-                        <img src="../../img/snow.jpeg" class="card-img-top" alt="image">
+                        <img src="../../img/paris.jpg" class="card-img-top" alt="image">
                         <div class="card-body">
                             <h5 class="card-title">
                                 Paris
@@ -93,7 +93,7 @@
                 </div>
                 <div class="col-4">
                     <div class="card categories-card">
-                        <img src="../../img/yazzz.jpeg" class="card-img-top" alt="image">
+                        <img src="../../img/berlin.jpg" class="card-img-top" alt="image">
                         <div class="card-body">
                             <h5 class="card-title">
                                 Berlin
@@ -109,7 +109,7 @@
                 </div>
                 <div class="col-4">
                         <div class="card categories-card">
-                            <img src="../../img/cat-family.jpg" class="card-img-top" alt="image">
+                            <img src="../../img/ny.jpg" class="card-img-top" alt="image">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     New York
@@ -125,7 +125,7 @@
                     </div>
                     <div class="col-4">
                         <div class="card categories-card">
-                            <img src="../../img/ark.jpeg" class="card-img-top" alt="image">
+                            <img src="../../img/la.jpg" class="card-img-top" alt="image">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     Los Angeles
@@ -141,7 +141,7 @@
                     </div>
                     <div class="col-4">
                         <div class="card categories-card">
-                            <img src="../../img/chrs.jpeg" class="card-img-top" alt="image">
+                            <img src="../../img/viyana.jpg" class="card-img-top" alt="image">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     Viyana
@@ -157,7 +157,7 @@
                     </div>
                     <div class="col-4">
                         <div class="card categories-card">
-                            <img src="../../img/sanat.jpeg" class="card-img-top" alt="image">
+                            <img src="../../img/sydney.jpg" class="card-img-top" alt="image">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     Sydney
@@ -173,7 +173,7 @@
                     </div>
                     <div class="col-4">
                         <div class="card categories-card">
-                            <img src="../../img/snow.jpeg" class="card-img-top" alt="image">
+                            <img src="../../img/dubai.jpg" class="card-img-top" alt="image">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     Dubai
@@ -189,7 +189,7 @@
                     </div>
                     <div class="col-4">
                         <div class="card categories-card">
-                            <img src="../../img/yazzz.jpeg" class="card-img-top" alt="image">
+                            <img src="../../img/rio.jpg" class="card-img-top" alt="image">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     Rio de Jenario
@@ -205,7 +205,7 @@
                      </div>
                      <div class="col-4">
                             <div class="card categories-card">
-                                <img src="../../img/cat-family.jpg" class="card-img-top" alt="image">
+                                <img src="../../img/prag.jpg" class="card-img-top" alt="image">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         Prag
@@ -221,7 +221,7 @@
                         </div>
                         <div class="col-4">
                             <div class="card categories-card">
-                                <img src="../../img/ark.jpeg" class="card-img-top" alt="image">
+                                <img src="../../img/marakes.jpg" class="card-img-top" alt="image">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         Marakeş
@@ -237,7 +237,7 @@
                         </div>
                         <div class="col-4">
                             <div class="card categories-card">
-                                <img src="../../img/chrs.jpeg" class="card-img-top" alt="image">
+                                <img src="../../img/amsterdam.jpeg" class="card-img-top" alt="image">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         Amsterdam
@@ -253,7 +253,7 @@
                         </div>
                         <div class="col-4">
                             <div class="card categories-card">
-                                <img src="../../img/sanat.jpeg" class="card-img-top" alt="image">
+                                <img src="../../img/londra.jpg" class="card-img-top" alt="image">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         Londra
@@ -269,7 +269,7 @@
                         </div>
                         <div class="col-4">
                             <div class="card categories-card">
-                                <img src="../../img/snow.jpeg" class="card-img-top" alt="image">
+                                <img src="../../img/barca.jpg" class="card-img-top" alt="image">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         Barcelona
@@ -285,7 +285,7 @@
                         </div>
                         <div class="col-4">
                             <div class="card categories-card">
-                                <img src="../../img/yazzz.jpeg" class="card-img-top" alt="image">
+                                <img src="../../img/madrid.jpg" class="card-img-top" alt="image">
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         Madrid
@@ -301,7 +301,7 @@
                         </div>
                         <div class="col-4">
                                 <div class="card categories-card">
-                                    <img src="../../img/cat-family.jpg" class="card-img-top" alt="image">
+                                    <img src="../../img/roma.jpg" class="card-img-top" alt="image">
                                     <div class="card-body">
                                         <h5 class="card-title">
                                             Roma
@@ -317,7 +317,7 @@
                             </div>
                             <div class="col-4">
                                 <div class="card categories-card">
-                                    <img src="../../img/ark.jpeg" class="card-img-top" alt="image">
+                                    <img src="../../img/venedik.jpg" class="card-img-top" alt="image">
                                     <div class="card-body">
                                         <h5 class="card-title">
                                             Venedik
@@ -333,7 +333,7 @@
                             </div>
                             <div class="col-4">
                                 <div class="card categories-card">
-                                    <img src="../../img/chrs.jpeg" class="card-img-top" alt="image">
+                                    <img src="../../img/porto.jpg" class="card-img-top" alt="image">
                                     <div class="card-body">
                                         <h5 class="card-title">
                                             Porto
@@ -349,7 +349,7 @@
                             </div>
                             <div class="col-4">
                                 <div class="card categories-card">
-                                    <img src="../../img/sanat.jpeg" class="card-img-top" alt="image">
+                                    <img src="../../img/moskova.jpg" class="card-img-top" alt="image">
                                     <div class="card-body">
                                         <h5 class="card-title">
                                             Moskova
@@ -365,7 +365,7 @@
                             </div>
                             <div class="col-4">
                                 <div class="card categories-card">
-                                    <img src="../../img/snow.jpeg" class="card-img-top" alt="image">
+                                    <img src="../../img/kiev.jpg" class="card-img-top" alt="image">
                                     <div class="card-body">
                                         <h5 class="card-title">
                                             Kiev
@@ -381,7 +381,7 @@
                             </div>
                             <div class="col-4">
                                 <div class="card categories-card">
-                                    <img src="../../img/yazzz.jpeg" class="card-img-top" alt="image">
+                                    <img src="../../img/belgrad.jpg" class="card-img-top" alt="image">
                                     <div class="card-body">
                                         <h5 class="card-title">
                                             Belgrad

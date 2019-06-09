@@ -65,6 +65,11 @@
                                 <a class="dropdown-item" href="/dashboard">Kontrol Paneli</a>
                                 <a class="dropdown-item" href="/favorite">Favoriler</a>
                                 <a class="dropdown-item" href="/notifications/create">Şikayet ve Öneriler</a>
+                                @if (Auth::user()->id ==1)
+                                
+                                <a class="dropdown-item" href="/admin">Admin Paneli</a>
+
+                                 @endif  
 
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();

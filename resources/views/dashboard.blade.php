@@ -45,7 +45,7 @@
                                 @endforeach   
                             </div>
                             @else 
-                            <p>You have no blog post !!</p>
+                            <p>Hiç blog yazınız bulunmamaktadır !!</p>
                         @endif 
                     </div>
             </div>

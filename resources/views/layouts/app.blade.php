@@ -44,7 +44,8 @@
                             Veni Vidi Scripsi
                         </h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo unde harum recusandae maxime est itaque velit natus quod voluptates dolore.
+                            Veni Vidi Scripsi’nin amacı, insanların gitmek istedikleri şehirler/ülkeler hakkında ihtiyaçları olan bilgilere ulaşması ve yaşadıkları gezi deneyimlerini paylaşmaları için kullanıcılara bir web platformu sağlamaktır. 
+.
                         </p>
                         <p>
                             &copy; Tüm hakları saklıdır

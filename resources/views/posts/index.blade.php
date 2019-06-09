@@ -4,7 +4,7 @@
 <section class="section section-posts">
 
     <h1 class="section-heading">
-        Blog Yazılarımız
+        Bloglar
     </h1>
     
     <form method="POST" action="{{url("/search")}}">
@@ -36,6 +36,9 @@
                         Post Oluştur
                     </a>
                 </div>
+                <hr>
+                
+                
                 <div class="mt-3">
                     <div class="row">
 

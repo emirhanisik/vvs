@@ -51,12 +51,14 @@ Route::get('/favorites/{id}','PostsController@favorites');
 Route::get('favorite','FavoriteController@index');
 Auth::routes();
 
-
+Route::get('/admin','CategoryController@index');
 
 Route::get('/favorite','PostsController@view_favorites');
 Route::get('/posts/favorites','PostsController@view_favorites');
 Route::get('/removeFavorite/{id}','PostsController@removeFavorite');
 Route::get('/removeComment/{id}','PostsController@removeComment');
+Route::get('/removeCategory/{id}','CategoryController@removeCategory');
+
 
 
 //Category Routes
@@ -68,6 +70,7 @@ Route::get('/category/semester', 'PostsController@semesterCategory');
 Route::get('/category/summer', 'PostsController@summerCategory');
 
 Route::resource('notifications','NotificationController');
+Route::resource('category','CategoryController');
 
 //City Routes
 Route::get('/city/istanbul', 'PostsController@istanbul');

@@ -69,7 +69,7 @@
 
                     <div>
                     {{-- ROZETLER --}}
-
+                    <!--0 -->
                     @if(count($posts) >= 0)
 
                     <div>
@@ -78,7 +78,7 @@
                     </div>
 
                     @endif
-                    
+                    <!--1 -->
                     @if (count($posts) >= 1)
                     
                     <div>  
@@ -86,7 +86,7 @@
                         <span>İlk Paylaşım</span>
                     </div>
                     @endif
-                    
+                    <!--5 -->
                     @if (count($posts) >= 5)
 
                     <div>
@@ -94,7 +94,7 @@
                         <span>Çırak Yazar</span>
                     </div>
                     @endif
-
+                    <!--5 -->
                     @if (count($posts) >= 5)
 
                     <div>
@@ -102,23 +102,26 @@
                         <span>Gezgin</span>
                     </div>
                     @endif
-                    
+                    <!--7 -->
                     @if (count($posts) >= 7)
 
                     <div>
                     <img title="Yerinde Durmayan" src="https://img.icons8.com/color/48/000000/worldwide-location.png">
-                    
+                    <span>Yerinde Durmayan</span>
+                    </div>
+                    <div>
                     <img title="Usta Yazar" src="https://img.icons8.com/color/48/000000/sergeant-major-sgt.png">
+                    <span>Usta Yazar</span>
                     </div>
                     @endif
-                    
+                    <!--1 -->
                     @if (count($comments)>=1)
                     <div>
                         <img title="Meraklı" src="https://img.icons8.com/color/48/000000/speech-bubble-with-dots.png">
                         <span>Meraklı</span>
                     </div>
                     @endif
-                    
+                    <!--5 -->
                     @if (count($comments)>=5)
                     
                     <div>
@@ -143,7 +146,7 @@
         
             <div class="col-12">
                 <h3 class="section-heading">
-                    Yazdığınız Postlar
+                    Yazılan Bloglar
                 </h3>
             </div>
 
@@ -160,8 +163,10 @@
                                     height="200" 
                                     alt="image"
                                 >
+                                
                                 <div class="card-body p-0">
-                                    <a 
+                                <h3 style="text-align:center" class="card-title">{{$post->title}}</h3>
+                                    <a                                         
                                         href="/posts/{{$post->id}}" 
                                         class="btn btn-secondary btn-block"
                                         style="border-top-left-radius: 0; border-top-right-radius: 0;"
@@ -175,7 +180,7 @@
 
                 @else 
 
-                <p>Henüz post yazmadınız!</p>
+                <p>Henüz blog yazısı yazmadınız!</p>
 
                 @endif 
             @endsection
