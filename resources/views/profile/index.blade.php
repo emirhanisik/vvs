@@ -58,7 +58,7 @@
 
                 <div class="profile-info text-center my-3">
                     <p class="fg--dark mb-1">Yazılan Blog Sayısı: <span class="fg--blue"><?php echo count($posts)?></span></p>
-                    <p class="fg--dark mb-0">Yazılan Yorum Sayısı: <span class="fg--blue"><?php echo count($comments)?></span></p>
+                    <p class="fg--dark mb-0">Yazılan Yorum Sayısı: <span class="fg--blue"><?php echo count($user->comments)?></span></p>
                 </div>
 
                 <div class="profile-badges text-center">
@@ -115,14 +115,14 @@
                     </div>
                     @endif
                     <!--1 -->
-                    @if (count($comments)>=1)
+                    @if (count($user->comments)>=1)
                     <div>
                         <img title="Meraklı" src="https://img.icons8.com/color/48/000000/speech-bubble-with-dots.png">
                         <span>Meraklı</span>
                     </div>
                     @endif
                     <!--5 -->
-                    @if (count($comments)>=5)
+                    @if (count($user->comments)>=5)
                     
                     <div>
                         <img title="Eleştirmen" src="https://img.icons8.com/color/48/000000/critical-thinking.png">
